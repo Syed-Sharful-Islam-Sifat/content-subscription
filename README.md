@@ -35,7 +35,7 @@ This is a RESTful API for a content subscription platform where users can regist
 
 ### 1. Import the Postman Collection
 
-- Import the Postman collection through the following path: `postman/postman-collection.json`.
+- Import the Postman collection through the following path: `src/postman/postman-collection.json`.
 
 ### 2. Set Up Environment Variables
 
@@ -173,4 +173,3 @@ Response:
 This API is deployed on **Render**. You can access the live API at:
 
 - **[Live Link](https://content-subscription.onrender.com)**
-
