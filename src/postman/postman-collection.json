@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "ee90f1e6-62e5-48e8-b18a-c6c1577f79fe",
+    "name": "Content-subscription",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33825331"
+  },
+  "item": [
+    {
+      "name": "Auth apis",
+      "item": [
+        {
+          "name": "register an user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userName\":\"\",\r\n    \"email\":\"\",\r\n    \"password\":\"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/p/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["p", "auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"email\":\"\",\r\n    \"password\":\"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/p/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["p", "auth", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Category apis",
+      "item": [
+        {
+          "name": "get all categories",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{accessToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userName\":\"abc\",\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"a12q123213\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/a/category",
+              "host": ["{{baseUrl}}"],
+              "path": ["a", "category"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "subscribe to a category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{accessToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"categoryId\":\"67bac66ce97818ba1f8257e8\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/a/category/subscribe",
+              "host": ["{{baseUrl}}"],
+              "path": ["a", "category", "subscribe"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "feed apis",
+      "item": [
+        {
+          "name": "get feed contents",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{accessToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userName\":\"abc\",\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"a12q123213\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/a/feed",
+              "host": ["{{baseUrl}}"],
+              "path": ["a", "feed"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
