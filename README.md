@@ -31,6 +31,26 @@ This is a RESTful API for a content subscription platform where users can regist
 - **External API Integration:** NewsAPI
 - **Deployment:** Render
 
+## API Testing Guidelines
+
+### 1. Import the Postman Collection
+
+- Import the Postman collection through the following path: `postman/postman-collection.json`.
+
+### 2. Set Up Environment Variables
+
+- Set the following environment variables in Postman:
+  - `baseUrl` = `https://content-subscription.onrender.com/api`
+  - `accessToken` (to be set after logging in, dynamically)
+
+### 3. Test Authenticated Routes
+
+- Use the **Bearer token** in the **authorization header** to test authenticated API routes.
+  - Example:
+    - `authorization: Bearer {{access_token}}`
+- Expected: A valid token should return a `200 OK` response with the requested data.
+- If the token is invalid or expired, you should receive a `401 Unauthorized` response.
+
 ## Recording Demo
 
 ### Authentication
@@ -148,32 +168,9 @@ Response:
 }
 ```
 
-### Postman Collection
-
-Import the provided Postman collection to test API endpoints efficiently.
-
 ## Deployment
 
 This API is deployed on **Render**. You can access the live API at:
 
 - **[Live Link](https://content-subscription.onrender.com)**
 
-## API Testing Guidelines
-
-### 1. Import the Postman Collection
-
-- Import the Postman collection through the following path: `postman/postman-collection.json`.
-
-### 2. Set Up Environment Variables
-
-- Set the following environment variables in Postman:
-  - `baseUrl` = `https://content-subscription.onrender.com/api`
-  - `accessToken` (to be set after logging in, dynamically)
-
-### 3. Test Authenticated Routes
-
-- Use the **Bearer token** in the **authorization header** to test authenticated API routes.
-  - Example:
-    - `authorization: Bearer {{access_token}}`
-- Expected: A valid token should return a `200 OK` response with the requested data.
-- If the token is invalid or expired, you should receive a `401 Unauthorized` response.
