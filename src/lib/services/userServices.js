@@ -11,7 +11,7 @@ exports.registerUser = async (req, res) => {
 
   const { userName, email, password } = req.body;
 
-  const [isUserNameExists, isEmailExists] = await Promise.all([
+  const [isEmailExists, isUserNameExists] = await Promise.all([
     userRepository.findOne({
       query: { email },
       select: {
