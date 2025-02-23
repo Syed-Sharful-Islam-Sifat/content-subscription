@@ -1,4 +1,5 @@
 const ensureDBConeection = require("../config/db");
+const authenticateUser = require("./authenticateUser");
 module.exports = (handler) => {
   return async (req, res) => {
     try {
@@ -8,6 +9,7 @@ module.exports = (handler) => {
       console.log(url);
       if (url.startsWith("/api/p")) {
       } else if (url.startsWith("/api/a")) {
+        await authenticateUser(req);
       }
 
       const response = await handler(req, res);
