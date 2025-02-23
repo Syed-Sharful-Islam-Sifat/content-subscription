@@ -147,32 +147,6 @@ Response:
 }
 ```
 
-### Email Confirmation
-
-Upon successful subscription, a confirmation email is sent.
-
-### (Optional) Payment & Premium Content
-
-#### Initiate Payment
-
-`POST /api/payment`
-
-```json
-{
-  "amount": 10,
-  "currency": "USD"
-}
-```
-
-Response:
-
-```json
-{
-  "message": "Payment successful",
-  "transactionId": "txn_123456"
-}
-```
-
 ### Postman Collection
 
 Import the provided Postman collection to test API endpoints efficiently.
@@ -183,56 +157,4 @@ This API is deployed on **Render**. You can access the live API at:
 
 - **[Live Link](https://content-subscription.onrender.com)**
 
-## Installation & Setup
-
-### Prerequisites
-
-- Node.js
-- MongoDB Atlas (or local MongoDB instance)
-
-### Steps
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/content-subscription-api.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd content-subscription-api
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Configure environment variables (`.env` file):
-   ```plaintext
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   EMAIL_SERVICE=your_email_service
-   EMAIL_USER=your_email@example.com
-   EMAIL_PASS=your_email_password
-   ```
-5. Run the server:
-   ```sh
-   npm start
-   ```
-
-## Contribution
-
-Feel free to fork this project, submit issues, or create pull requests for improvements.
-
-## Contact
-
-For any inquiries, reach out to:
-
-- Email: [jacksonkasi@peacockindia.co.in](mailto:jacksonkasi@peacockindia.co.in)
-- Email: [shreeram@peacockindia.in](mailto:shreeram@peacockindia.in)
-
----
-
-### Submission Checklist
-
-✅ **Public GitHub Repo**: [GitHub Repo Link]
-✅ **Live API Link**: [https://content-subscription.onrender.com](https://content-subscription.onrender.com)
-✅ **Postman Collection**: Attached in the repository
-✅ **Comprehensive README** ✅ **Deployed API**
+## API testing guideline
