@@ -12,7 +12,7 @@ const getFeed = async (req, res) => {
     for (category of subscribedCategories) {
       const result = await apiRoutes.getContentFromNewsApi(category.name);
       const { data } = result;
-      articles.push(...data.articles);
+      articles.push(...data.data);
     }
   } catch (error) {
     articles = [];
